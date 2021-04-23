@@ -134,6 +134,18 @@ bundle exec grundle remove packagename
 
 It'll be removed from your nodules folder and your `package.json` file. Grundler will also get rid of any empty directories left after a removal.
 
+## Configuration
+
+There's only one configuration directive at this point and it's called `nodulePath`. Say you have all your JS source files in a directory called `src`. The you might want your dependencies to live in `src/nodules`. Add the `nodulePath` directive to your package.json like so:
+```json
+{
+  "dependencies": {},
+  "nodulePath": "./src/nodules"
+}
+```
+
+That'll make all of Grundler's operations work on that directory instead.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
