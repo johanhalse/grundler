@@ -28,7 +28,7 @@ Sorry! But Grundler fills one of the most _important niches_ in the Ruby ecosyst
 
 You've totally used a package manager before. You'll need to use one to install this one, in fact. So you probably know most of the stuff you need to know. Grundler, as a design goal, tries to 1) leverage the new browser-supported module format and 2) do as little as possible. You won't find any script sections or dev dependencies in its configuration. You can't run commands through it, shrinkwrap, or add prepublish steps. It'll only grab packages for you off npm's repository so you can use them and you should be damn well content with that.
 
-## But please tell me you didn't invent a new configuration file though
+## Please tell me you didn't invent a new configuration file though
 
 I'm not below that sort of thing but no, it reads your `package.json` kind of like you'd expect. Grundler only bothers with the important part, the `{ "dependencies" }` section. If you expect it to also run your dev server or test suite or whatever, you will be disappointed. You might be disappointed anyway but I'd honestly prefer you at least be disappointed with the right things?
 
@@ -136,7 +136,7 @@ It'll be removed from your nodules folder and your `package.json` file. Grundler
 
 ## Configuration
 
-There's only one configuration directive at this point and it's called `nodulePath`. Say you have all your JS source files in a directory called `src`. The you might want your dependencies to live in `src/nodules`. Add the `nodulePath` directive to your package.json like so:
+There's only one configuration directive at this point and it's called `nodulePath`. Say you have all your JS source files in a directory called `src`. Then you might want your dependencies to live in `src/nodules`. Add the `nodulePath` directive to your package.json like so:
 ```json
 {
   "dependencies": {},
